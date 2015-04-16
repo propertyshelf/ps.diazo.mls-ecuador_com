@@ -26,7 +26,7 @@ function display_portlet_form(){
     var portlet = $( "body #content article" ).hasClass( "development" );
 
     if (portlet == true){
-        console.log("Yes this site true");
+        
     }
     else{
         $('#portal-column-two').hide();

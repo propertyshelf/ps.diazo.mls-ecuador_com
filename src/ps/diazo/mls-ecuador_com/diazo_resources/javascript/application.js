@@ -7,11 +7,16 @@ function portletform(){
 }
 
 function pos_fix_for_portlet_form(){
+ 
     portletform = $( "body .global-wrapper #portal-columns .portlet_form" );
+    hheader = $( ".development__header" ).height() + 80;
+    win = $(window).scrollTop();
+    
     $(window).scroll(function(){
-        if ($(window).scrollTop() > 80){
+        if (win > hheader ) {
             $(portletform).addClass('pos_fix');
-        } else if ($(window).scrollTop() < 80){
+        }
+        else {
             $(portletform).removeClass('pos_fix');
         }
     });
@@ -29,6 +34,15 @@ function display_portlet_form(){
         $('#portal-column-content').removeClass('width-3:4');
         $('#portal-column-content').addClass('width-full');
 
+    }
+}
+
+function display_portlet_form_less(){
+    if ($(window).width() < 900) {
+       alert('Less than 960');
+    }
+    else {
+       alert('More than 960');
     }
 }
 
@@ -204,8 +218,16 @@ $(document).ready(function() {
     if($('.portlet_contact').length>0){
         portletform();
         display_portlet_form();
-        pos_fix_for_portlet_form();
     }   
+    $(window).scroll(function () {
+        pos_fix_for_portlet_form()
+        if ($(window).scrollTop() + $(window).height() > $('.development__contact .formControls').offset().top) {
+            $('#portal-column-two').hide();
+        } else {
+            $('#portal-column-two').show();
+        }
+    });
+    
     if($('.portletNavigationTree').length>0){
         if($('.portletNavigationTree .hiddenStructure.portletHeader').length>0){
             $(".portletNavigationTree .portletItem").addClass('active');
@@ -248,7 +270,21 @@ $(document).ready(function() {
    if($(".developer_table").length>0){
        $(".developer_table tr").first().addClass('nohover');
    }
-  
+   
+    $(window).on('resize', function() {
+        if ($('.development__header').length>0) {
+            if ($(window).width() < 900) {
+                $('#portal-column-two').hide();
+                $('#portal-column-content').removeClass('width-3:4');
+                $('#portal-column-content').addClass('width-full');
+            } else {
+                $('#portal-column-two').show();
+                $('#portal-column-content').removeClass('width-full');
+                $('#portal-column-content').addClass('width-3:4');
+            }
+        }
+    });
+    
     $(window).resize(function() {
         if($(".global-header").css('position')=='fixed'){
             var header_height = $('header.global-header').css('height');

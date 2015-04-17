@@ -26,7 +26,7 @@ function display_portlet_form(){
     var portlet = $( "body #content article" ).hasClass( "development" );
 
     if (portlet == true){
-        
+
     }
     else{
         $('#portal-column-two').hide();
@@ -214,7 +214,36 @@ function development_button(){
         });
 }
 
-$(document).ready(function() {
+function form_contact(){
+    name = $('.development__contact .development__vcard h3').html();
+    address = $('.development__contact .development__vcard address').html();
+    $('.portlet_contact .portlet_contact_us_top .replacename').replaceWith("<h3>"+ name + "</h3>");  
+    $('.portlet_contact .portlet_contact_us_top .replaceaddress').replaceWith(address);   
+}
+/*
+function translate_form(){
+    
+    var print_text= "";
+
+    if($('.site-en').length>0)
+    {
+      print_text ="Agent Contact";
+    }
+    if($('.site-es').length>0)
+    {
+      print_text ="Permítanos Asesorarle";
+    }
+    
+    $('.portlet_form .portletHeader span:nth-child(2)').text(print_text);
+     
+}
+*/
+
+$(document).ready(function() { 
+    if($('.development__contact').length>0){
+        form_contact();
+    }  
+
     if($('.portlet_contact').length>0){
         portletform();
         display_portlet_form();
@@ -284,7 +313,7 @@ $(document).ready(function() {
             }
         }
     });
-    
+   
     $(window).resize(function() {
         if($(".global-header").css('position')=='fixed'){
             var header_height = $('header.global-header').css('height');

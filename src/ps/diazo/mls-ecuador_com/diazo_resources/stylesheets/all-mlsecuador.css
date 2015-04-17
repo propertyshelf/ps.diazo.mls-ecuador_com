@@ -1,3 +1,28 @@
+body #content .development .development_details .development__groups .listing-summary .tileItem .image_row .tileHeadline a {
+    color: #757575;
+}
+body .portlet_contact_us_bottom #pfg-fieldwrapper .field {
+    margin: 0;
+}
+body .development_details .data_row .price {
+    background-color: #00afcc;
+}
+body .development_details .listing-summary .tileItem .data_row {
+    background-color: #007a91;
+}
+body .global-wrapper .development_details #group-listings li a {
+    background-color: #6abcca;
+    color: #fff;
+}
+body .global-wrapper .development_details #group-listings li a.current, 
+body .global-wrapper .development_details #group-listings li a.current:visited, 
+body .global-wrapper .development_details #group-listings li a.current:focus {
+    background-color: #a1bf16 !important;
+}
+body .development__phases table tbody tr td a {
+    pointer-events: none;
+    cursor: default;
+}
 body .development__overview .lead_image {
     margin: 0 30px 20px 0;
 }
@@ -147,10 +172,17 @@ body .global-wrapper #portal-columns .portlet_form .portletHeader span{
 .portlet_contact_us_top {
     padding: 1px 20px 10px;
 }
-.portlet_contact_us_top h4 {
+.portlet_contact_us_top h3 {
     margin-bottom: 13px;
     font-style: italic;
     color: #fff;
+}
+body .portlet_contact_us_top span, .portlet_contact_us_top div  {
+    color: #fff;
+}
+body .portlet_contact_us_top a {
+    color: #fff !important;
+    text-decoration: none !important;
 }
 .portlet_contact_us_top p {
     margin-bottom: 1px !important;
@@ -176,8 +208,11 @@ body .global-wrapper #portal-columns .portlet_form .portletHeader span{
 .portlet_contact_us_bottom input {
     width: 100%;
 }
-.portlet_contact_us_bottom textarea {
+.portlet_contact_us_bottom textarea{
     width: 96%;
+}
+.portlet_contact_us_bottom textarea#name {
+    height: 17px;
 }
 .portlet_contact_us_bottom input.portlet_contact_send {
     border: 1px solid #c4c4c4;
@@ -218,6 +253,13 @@ body .global-wrapper #portal-columns .portlet_form .portletHeader span{
     }
 }
 @media (max-width: 985px){
+    body .development__header .development__banner {
+        height: auto;
+        max-width: 100%;
+        min-width: 100%;
+        width: auto;
+        min-height: 0;
+    }
     body.template-mlsecuador_frontpage .global-wrapper #portal-columns.hasPortlet #latest-listings-wrapper article{
         width:46%;
         margin-top:2%;

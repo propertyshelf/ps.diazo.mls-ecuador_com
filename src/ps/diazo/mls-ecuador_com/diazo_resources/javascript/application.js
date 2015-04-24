@@ -7,7 +7,6 @@ function portletform(){
 }
 
 function pos_fix_for_portlet_form(){
- 
     portletform = $( "body .global-wrapper #portal-columns .portlet_form" );
     hheader = $( ".development__header" ).height() + 80;
     win = $(window).scrollTop();
@@ -30,19 +29,10 @@ function display_portlet_form(){
     }
     else{
         $('#portal-column-two').hide();
+        $('.portlet_form').hide();
         $('body').addClass('development_site');
         $('#portal-column-content').removeClass('width-3:4');
         $('#portal-column-content').addClass('width-full');
-
-    }
-}
-
-function display_portlet_form_less(){
-    if ($(window).width() < 900) {
-       alert('Less than 960');
-    }
-    else {
-       alert('More than 960');
     }
 }
 
@@ -216,46 +206,69 @@ function development_button(){
 
 function form_contact(){
     name = $('.development__contact .development__vcard h3').html();
+    form = $('.development__contact').html();
     address = $('.development__contact .development__vcard address').html();
     $('.portlet_contact .portlet_contact_us_top .replacename').replaceWith("<h3>"+ name + "</h3>");  
-    $('.portlet_contact .portlet_contact_us_top .replaceaddress').replaceWith(address);   
+    $('.portlet_contact .portlet_contact_us_top .replaceaddress').replaceWith(address);  
+    $('.portlet_contact_us_bottom .portlet_contact_agent_form').replaceWith(form);
+    $('.portlet_contact_us_bottom h2').remove();
+    $('.portlet_contact_us_bottom .development__vcard').remove();
 }
-/*
-function translate_form(){
-    
-    var print_text= "";
 
-    if($('.site-en').length>0)
-    {
-      print_text ="Agent Contact";
+function portlettwo_with_dev(){
+    if ($('.development').length>0) {
+            if ($(window).width() < 884) {
+            $('#portal-column-two').removeClass('show');
+            $('#portal-column-two').addClass('hide');
+            $('#portal-column-content').removeClass('width-3:4');
+            $('#portal-column-content').addClass('width-full');
+        } else {
+            $('#portal-column-two').removeClass('hide');
+            $('#portal-column-two').addClass('show');
+            $('#portal-column-content').removeClass('width-full');
+            $('#portal-column-content').addClass('width-3:4');
+        }
     }
-    if($('.site-es').length>0)
-    {
-      print_text ="Permítanos Asesorarle";
-    }
-    
-    $('.portlet_form .portletHeader span:nth-child(2)').text(print_text);
-     
 }
-*/
+
+function portlet_form_stop(){
+    
+   if ($(window).scrollTop() + $(window).height() > $('.development__contact .formControls, .footer-wrapper').offset().top) {
+        $('#portal-column-two').addClass('hide');
+        $('#portal-column-two').removeClass('show');
+    } else {
+        $('#portal-column-two').addClass('show');
+        $('#portal-column-two').removeClass('hide');
+    }
+}
 
 $(document).ready(function() { 
     if($('.development__contact').length>0){
         form_contact();
     }  
-
+    
+   
+    portlettwo_with_dev();
     if($('.portlet_contact').length>0){
         portletform();
+    }
+
+    if($('.section-developments .listing-summary, .section-proyectos .listing-summary, .section-developments .listing.detail, .section-proyectos .listing.detail').length>0){
         display_portlet_form();
+    } 
+        
+    if($('.development').length>0){
+        $(window).scroll(function () {
+            pos_fix_for_portlet_form();
+            portlet_form_stop();
+        });
     }   
-    $(window).scroll(function () {
-        pos_fix_for_portlet_form()
-        if ($(window).scrollTop() + $(window).height() > $('.development__contact .formControls').offset().top) {
-            $('#portal-column-two').hide();
-        } else {
-            $('#portal-column-two').show();
-        }
-    });
+
+    if($('.section-developments .listing-summary, .section-proyectos .listing-summary, .section-developments .listing.detail, .section-proyectos .listing.detail').length>0){
+        display_portlet_form();
+    } 
+    
+    pos_fix_for_portlet_form();
     
     if($('.portletNavigationTree').length>0){
         if($('.portletNavigationTree .hiddenStructure.portletHeader').length>0){
@@ -269,6 +282,7 @@ $(document).ready(function() {
     if($('#home-search-wrapper').length>0){
         update_search_mask_label();
     }
+    
     /* add custom id for global navigation*/
     $("nav.globalnav").attr('id', 'nav');
     var navigation = responsiveNav("#nav", {
@@ -299,19 +313,9 @@ $(document).ready(function() {
    if($(".developer_table").length>0){
        $(".developer_table tr").first().addClass('nohover');
    }
-   
+
     $(window).on('resize', function() {
-        if ($('.development__header').length>0) {
-            if ($(window).width() < 900) {
-                $('#portal-column-two').hide();
-                $('#portal-column-content').removeClass('width-3:4');
-                $('#portal-column-content').addClass('width-full');
-            } else {
-                $('#portal-column-two').show();
-                $('#portal-column-content').removeClass('width-full');
-                $('#portal-column-content').addClass('width-3:4');
-            }
-        }
+        portlettwo_with_dev();
     });
    
     $(window).resize(function() {

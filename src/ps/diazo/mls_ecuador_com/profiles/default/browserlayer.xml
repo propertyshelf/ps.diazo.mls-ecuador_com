@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="ps.diazo.mls_ecuador_com"
+      interface="ps.diazo.mls_ecuador_com.interfaces.IPsDiazoMlsEcuadorComLayer"
+      />
+</layers>

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Setup for ps.diazo.mls-ecuador_com package."""
+"""Setup for ps.diazo.mls_ecuador_com package."""
 
 from setuptools import setup, find_packages
 
@@ -18,7 +18,7 @@ install_requires = [
 ]
 
 setup(
-    name='ps.diazo.mls-ecuador_com',
+    name='ps.diazo.mls_ecuador_com',
     version=version,
     description=description,
     long_description=long_description,
@@ -39,8 +39,8 @@ setup(
     keywords='plone diazo',
     author='Propertyshelf, Inc.',
     author_email='development@propertyshelf.com',
-    url='https://github.com/propertyshelf/ps.diazo.mls-ecuador_com',
-    download_url='http://pypi.python.org/pypi/ps.diazo.mls-ecuador_com',
+    url='https://github.com/propertyshelf/ps.diazo.mls_ecuador_com',
+    download_url='http://pypi.python.org/pypi/ps.diazo.mls_ecuador_com',
     license='GPL',
     packages=find_packages('src', exclude=['ez_setup']),
     package_dir={'': 'src'},

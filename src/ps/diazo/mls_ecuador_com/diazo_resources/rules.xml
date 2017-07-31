@@ -182,5 +182,7 @@
                 css:if-content="body.site-es"
             />
         </rules>
-        
+      <after css:if-content="body.section-testing" css:theme-children="html head">
+        <link rel="stylesheet" type="text/css" href="{$portal_url}/++theme++ps.diazo.mls_ecuador_com/stylesheets/custom.css"/>
+      </after>
     </rules>

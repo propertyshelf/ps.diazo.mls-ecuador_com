@@ -4738,3 +4738,7 @@ body div.position-10.width-6{
     min-height:0 !important;
     max-heigth: none !important;
 }
+
+.newsImageContainer {
+    display: none;
+}

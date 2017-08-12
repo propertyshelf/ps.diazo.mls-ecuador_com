@@ -1,3 +1,75 @@
+body #content .development_details .development__groups #group-listings a:hover {
+    background-color: #a1bf16 !important;
+}
+body .development__amenities .amenitiesicon,
+body .distanceicon .icon {
+    color: #008da0;
+}
+body #content .listingBar a:link{
+    border-bottom:0.1em solid #ccc;
+}
+body .carousel-pager-item {
+    border-radius: 30px;
+    color: #dddddd;
+    font-size: 0.4em;
+    border: 1px solid #9b9b9b;
+}
+body .carousel-pager-item.carousel-pager-item-active {
+    color: #75ad0a;
+}
+body .carousel-text .carousel-title {
+    font-size: 30px;
+    color: #fff;
+}
+body .carousel-text h3 {
+    font-size: 24px;
+    color: #fff;
+}
+body .carousel-text p {
+    font-size: 18px;
+    color: #fff;
+}
+body .carousel-text a {
+    font-size: 18px;
+    color: #fff;
+}
+body .carousel-text a:hover {
+    color: #75ad0a;
+}
+body .carousel-text {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: auto;
+    right: 13%;
+    top: 10%;
+    bottom: auto;
+    left: auto;
+}
+body .carousel {
+    margin: 0 !important;
+}
+body .carousel-banners {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto !important;
+}
+body .carousel-banners .carousel-banner {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto !important;
+    position: static !important;
+}
+body .carousel-banners .carousel-banner .carousel-image img{
+    max-width: 100%;
+    min-width: 100%;
+    width: 100% !important;
+    height: 100% !important;
+}
+body .carousel-pager {
+    bottom: 0;
+    position: absolute;
+    right: 10%;
+}
+/*carousel end*/
 body.section-proyectos .global-wrapper .listing #listing-info,
 body.section-developments .global-wrapper .listing #listing-info{
     width: 46%;
@@ -470,7 +542,7 @@ body h1{
 }
 body h2{
     font-size:21px;
-	color:#4c739c
+    color:#4c739c
 }
 body h3{
 	color:#aab84b;
@@ -1210,7 +1282,7 @@ body #portal-columns .portletAgentContact form .field.error{
 }
 body #portal-columns .portletAgentContact form .fieldErrorBox{
 	color:#DD0000;
-	font-size:0.8em;
+	font-size: 1.5em;
 	font-style:italic;
 	text-align:center;
 	margin-bottom:7px
@@ -1343,11 +1415,11 @@ body #portal-columns .portletNews .news-title,body #content .portletNews .news-t
 body #portal-columns .portletNews .news-title a,body #portal-columns .portletNews .news-title h3,body #content .portletNews .news-title a,body #content .portletNews .news-title h3{
 	text-decoration:none;
 	cursor:pointer;
-	font-weight:400 !important;
-	line-height:1.1em;
+	font-weight:600;
+	line-height:1.3em;
 	font-family:'Roboto', sans-serif;
 	color:#3e3d3d;
-	font-size:13px
+	font-size:17px
 }
 body #listing-search .option .label{
 	padding-left:0.3em;
@@ -1606,6 +1678,9 @@ body .portletQuickSearch .form-row-sizes select#form-widgets-interior_area-max{
 }   
 
 @media (max-width: 1048px){
+    body .carousel {
+        margin-top: 4em;
+    }
 	body .global-wrapper .global-header{
 	    position:fixed;
     }
@@ -1788,6 +1863,17 @@ body .portletQuickSearch .form-row-sizes select#form-widgets-interior_area-max{
     }
 }
 @media (max-width: 680px){
+    body #content-core.development_details .listing-summary figure img{
+        position: static;
+        width: 100%;
+    }
+    #content .listing-summary.development-summary figure img {
+        width: auto;
+        max-width: 100%;
+    }
+    #content .listing-summary.development-summary figure {
+        text-align: center;
+    }
     body .global-wrapper #content-core.development_details .listing-summary figure {
         float: left;
         margin: 0;
@@ -2685,7 +2771,8 @@ body #portal-columns .portlet.portletNavigationTree dd.portletItem ul.navTree li
     max-height: 140px;
 }
 #content-wrapper .mceItemTable{
-    padding: 0 10%;    
+    padding: 0 10%;
+    font-size: 0.9em;
 }
 .dev_button{
     display:none;
@@ -3302,7 +3389,7 @@ body .global-wrapper #content .h4p-searchform .tile-header h2{
     text-align: center;
 }
 div.width-10 {
-    width: 62.9%;
+    width: 63.7%;
 }
 div.width-16 {
     width: 100%;
@@ -3314,7 +3401,10 @@ div.position-5 {
     margin-left: -66.1%;
 }
 div.position-10 {
-    margin-left: -33.2%;
+    margin-left: -32.4%;
+}
+div.width-6.position-10 {
+    width: 30.3%;
 }
 #content .mlsec_latest-listings .listing-collection-tile .collection-item{
     float: left;
@@ -3483,7 +3573,7 @@ body #portal-columns .portletStaticText img{
         margin-left: -100%;
     }
     .fake-porlet-right-gray table tbody td p{
-        width: 88%;
+        width: 87%;
     }
 }
 @media (min-width: 980px) and (max-width:1199px){
@@ -3532,6 +3622,9 @@ body #portal-columns .portletStaticText img{
         margin-left: -74%;
     }
     body div.position-1\:4 {
+        margin-left: -72%;
+    }
+    body .col_one div.position-1\:4{
         margin-left: -99%;
     }
     .template-manage-portlets #portal-column-one {
@@ -3556,7 +3649,7 @@ body #portal-columns .portletStaticText img{
         margin-right: 4%;
         min-height: 290px;
         padding: 0;
-        width: 45%;
+        width: 44.5%;
     } 
     #content .mlsec_latest-listings{
         overflow:hidden;
@@ -3575,6 +3668,9 @@ body #portal-columns .portletStaticText img{
     }
     body #portal-columns .row{
         float:none !important;   
+    }
+    body #portal-columns .listing-summary.development-summary .row{
+        float:left !important;   
     }
     body div.position-0.width-5,
     body div.position-5.width-5,
@@ -3666,6 +3762,9 @@ body #portal-columns .portletStaticText img{
         background-image: -moz-linear-gradient(center top , #6fb3d6, #58819d);
     }
     body div.position-1\:4 {
+        margin-left: -72%;
+    }
+    body .col_one div.position-1\:4 {
         margin-left: -99%;
     }
     .template-manage-portlets #portal-column-one {
@@ -3700,6 +3799,9 @@ body #portal-columns .portletStaticText img{
     }
     body #portal-columns .row{
         float:none !important;   
+    }
+    body #portal-columns .listing-summary.development-summary .row{
+        float:left !important;   
     }
     body div.position-0.width-5,
     body div.position-5.width-5,
@@ -3748,6 +3850,12 @@ body #portal-columns .portletStaticText img{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    #content .listing-summary.development-summary dt {
+        width: 30%;
+    }
+    #content .listing-summary.development-summary dd {
+        width: 60%;
+    }
     .developer_colored-box{
         max-height: 55px;
         min-height: 55px;
@@ -3808,9 +3916,7 @@ body #portal-columns .portletStaticText img{
         margin-left: -50.5% !important;
     }
     body .portletQuickSearch span.option{
-        float: left;
-        position: relative;
-        width: 50%;
+
     }
     body .col_two div#portal-column-two.position-3\:4 {
         left: 0;
@@ -3831,7 +3937,16 @@ body #portal-columns .portletStaticText img{
         background-image: -moz-linear-gradient(center top , #6fb3d6, #58819d);
     }
     body div.position-1\:4 {
-        margin-left: -99%;
+        clear: both;
+        margin-left: 2%;
+        position: static;
+        width: 96%;
+    }
+    body div#portal-column-one.width-1\:4 {
+        clear: both;
+        margin-left: 2%;
+        position: static;
+        width: 96%;
     }
     .template-manage-portlets #portal-column-one {
         margin-left: 0;
@@ -3886,6 +4001,9 @@ body #portal-columns .portletStaticText img{
     body #portal-columns .row{
         float:none !important;   
     }
+    body #portal-columns .listing-summary.development-summary .row{
+        float:left !important;   
+    }
     body div.position-0.width-5,
     body div.position-5.width-5,
     body div.position-10.width-5{
@@ -3921,7 +4039,16 @@ body #portal-columns .portletStaticText img{
         border-radius: 0;   
     }
 }
-@media (min-width: 481px) and (max-width: 599px){    
+@media (min-width: 481px) and (max-width: 599px){   
+    #content .listing-summary.development-summary dt {
+        width: 30%;
+    }
+    #content .listing-summary.development-summary dd {
+        width: 60%;
+    }
+    body div#portal-column-one.width-1\:4 {
+        position: static;
+    }
     body .development__contact #form #formfield-form-widgets-phone {
         width: 40%;
     }
@@ -4045,6 +4172,12 @@ body #portal-columns .portletStaticText img{
     }
 }
 @media (min-width: 401px) and (max-width: 480px){ 
+    #content .listing-summary.development-summary dt {
+        width: 40%;
+    }
+    #content .listing-summary.development-summary dd {
+        width: 60%;
+    }
     body .development__contact #formfield-form-widgets-name, 
     body .development__contact #formfield-form-widgets-sender_from_address,
     body .development__contact #form #formfield-form-widgets-phone,
@@ -4554,6 +4687,16 @@ body div.position-10.width-6{
     }
 }
 @media (max-width: 899px){ 
+    body .carousel-text {
+        position: static;
+        background-color: #000;
+        border-bottom: 1.5px solid #fff;
+        border-top: 1.5px solid #fff;
+    }
+    body .carousel-text .carousel-title {
+        font-size: 3em;
+        font-weight: 400;
+    }
     body #content-core.development_details .listing-summary figure img{
         top: -45px;
         max-width: none;

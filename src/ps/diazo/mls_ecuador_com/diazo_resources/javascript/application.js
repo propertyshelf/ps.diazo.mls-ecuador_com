@@ -242,7 +242,15 @@ function portlet_form_stop(){
     }
 }
 
+function full_carousel(){
+    $('.carousel').insertAfter('.topimage-header')
+}
+
 $(document).ready(function() { 
+    if($('.carousel').length>0){
+        full_carousel();
+    }  
+    
     if($('.development__contact').length>0){
         form_contact();
     }  

@@ -112,6 +112,9 @@ Main Components
   position: relative;
   margin-bottom: 1em;
 }
+#content ul.cd-pricing-list {
+  list-style-type: none;
+}
 @media only screen and (min-width: 768px) {
   .cd-pricing-list {
     margin: 3em 0 0;
@@ -205,6 +208,9 @@ Main Components
 }
 .cd-pricing-wrapper.is-switched.reverse-animation .is-selected {
   opacity: 1;
+}
+#content ul.cd-pricing-wrapper {
+  list-style-type: none;
 }
 .cd-pricing-wrapper > li {
   background-color: #FFFFFF;

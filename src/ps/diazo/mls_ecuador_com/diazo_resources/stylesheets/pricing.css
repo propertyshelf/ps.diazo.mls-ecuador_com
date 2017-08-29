@@ -459,6 +459,9 @@ Main Components
   display: table;
   clear: both;
 }
+#content ul.cd-pricing-features {
+  margin-left: 0;
+}
 .cd-pricing-features li {
   width: 100px;
   float: left;

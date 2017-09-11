@@ -341,7 +341,7 @@ Main Components
   height: 80px;
   padding: 0.8em;
   pointer-events: none;
-  background-color: #3aa0d1;
+  background-color: #3ad2d1;
   color: #FFFFFF;
 }
 .cd-pricing-header h2 {
@@ -351,7 +351,7 @@ Main Components
   text-transform: uppercase;
 }
 .cd-popular .cd-pricing-header {
-  background-color: #e97d68;
+  background-color: #BCC86D;
 }
 @media only screen and (min-width: 768px) {
   .cd-pricing-header {
@@ -466,7 +466,7 @@ Main Components
   width: 100px;
   float: left;
   padding: 1em 1em;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align: center;
   /*white-space: nowrap;*/
   overflow: hidden;
@@ -487,6 +487,7 @@ Main Components
     float: none;
     width: auto;
     padding: 0.6em;
+    font-size: 0.9rem;
     /*margin-right: 2.5em;*/
   }
   .cd-popular .cd-pricing-features li {

@@ -117,12 +117,14 @@ body .development_details  .ll .data_row .lot_size {
 body #content-core .development__contact .formHelp {
     color: #fff;
 }
+/*
 body .hide {
     display: none !important;
 }
 body .show {
     display: block !important;
 }
+*/
 body #content-core.development_details .listing-summary figure a {
     border: 0 none transparent !important;
     color: #767676 !important;

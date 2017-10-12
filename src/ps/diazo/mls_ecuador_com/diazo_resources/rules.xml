@@ -51,6 +51,11 @@
             </rules>
             </rules>
             
+            <before 
+                css:content=".listingsearchbanner"
+                css:theme="#content-wrapper"
+                method="raw"
+            />
             <drop css:content=".development__header" />
             <before 
                 css:content=".development__header"

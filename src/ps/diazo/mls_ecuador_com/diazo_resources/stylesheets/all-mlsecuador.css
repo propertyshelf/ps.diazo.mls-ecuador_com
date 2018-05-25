@@ -558,7 +558,7 @@ body input,body select{
 	max-width:95%
 }
 body select.value-range-widget{
-	max-width:42.5%
+	/*max-width:42.5%*/
 }
 body .global-wrapper{
 	color:#4c739c;
@@ -2004,7 +2004,7 @@ body .portletQuickSearch .form-row-sizes select#form-widgets-interior_area-max{
     }   
 }
 select.value-range-widget{
-    max-width:42.5%
+    /*max-width:42.5%*/
 }
 @media (max-width: 580px){
     body .global-wrapper #portal-columns.col_all #portal-column-content.width-1\3a 2.position-1\3a 4{

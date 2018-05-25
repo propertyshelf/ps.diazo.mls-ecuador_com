@@ -1649,7 +1649,7 @@ body .portletQuickSearch .form-row-location  select {
     max-width: none;
 }
 body .portletQuickSearch .form-row-beds-baths  select {
-    width:49%;
+    /*width:49%;*/
     max-width:none;
 }
 body .portletQuickSearch #formfield-form-widgets-location_city  input {
@@ -1661,7 +1661,7 @@ body .portletQuickSearch .form-row-price input{
     max-width: none;
 }
 body .portletQuickSearch .form-row-sizes select{
-    width:48%;   
+    /*width:48%;   */
     max-width:none;
 }
 body .portletQuickSearch .form-row-sizes select#form-widgets-beds-max,
